@@ -10,26 +10,29 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack(alignment: .leading){
-            HStack(alignment: .center, spacing: 5){
+            HStack{
                 Text("jessica.syj")
-                    .offset(x:140, y: 30)
+                    .padding(EdgeInsets(top: 30, leading: 150, bottom: 0, trailing: 0))
+                
                     .fontWeight(.black)
                 
                 Image(systemName: "checkmark.seal.fill")
-                    .offset(x:141, y: 30)
+                    .padding(.top,30)
+                    .foregroundStyle(.blue)
                 
                 Image(systemName: "bell")
-                    .offset(x:200, y: 30)
+                    .padding(EdgeInsets(top: 30, leading: 50, bottom: 0, trailing: 0))
                 
                 Image(systemName: "ellipsis")
-                    .offset(x:210, y: 30)
+                    .padding(.top,30)
             }
             HStack {
                 Image(.headshot)
                     .resizable()
-                    .scaledToFit()
-                    .frame(width: 140, height: 140)
-                    .offset(x: -10)
+                    .scaledToFill()
+                    .frame(width: 150, height: 100)
+                
+                
                 
                 VStack {
                     Text("1,240")
@@ -43,14 +46,17 @@ struct ContentView: View {
                         .bold()
                     Text("位粉絲")
                 }
-                
+                .padding(5)
                 VStack {
                     Text("6")
                         .bold()
                     Text("人追蹤中")
+                    
                 }
-                
+                .padding(5)
             }
+            .padding(0)
+            
             Group {
                 Text("Jessica Jung")
                     .bold()
@@ -65,6 +71,8 @@ struct ContentView: View {
                     .foregroundStyle(.blue)
                 Text("Beep Beep M/V 🎞️🎀🎶")
                 Text("Get it? Got it? Good M/V 👌🏻🎥")
+                Text("翻譯年糕")
+                    .bold()
             }
             .padding(.leading, 10)
             
@@ -90,12 +98,28 @@ struct ContentView: View {
             }
             .padding([.leading,.trailing], 7)
             
+            HStack{
+                Group {
+                    Image(.pic1)
+                        .resizable()
+                    Image(.pic2)
+                        .resizable()
+                    Image(.pic3)
+                        .resizable()
+                    Image(.pic4)
+                        .resizable()
+                    Image(.pic5)
+                        .resizable()
+                }
+                .padding(0)
+                .frame(width: 70, height: 70)
+            }
+            
             Image(.pic)
                 .resizable()
-                .frame(width: 393,height: 445)
+                .frame(height: 330)
             
             
-            Spacer()
             
         }
         
